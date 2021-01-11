@@ -20,6 +20,8 @@ USP　＝　Unique Selling Proposition 他社にはない独自の強み
   　  
 理解すれば当たり前ですが「販売促進」「市場調査」はあくまで手法の話で目的が何なのかそこの視点がなかったことを理解させられました。  
 
+![alt](assets/image/shopping_reji_gyouretsu_man.png)
+
 ---
 ## WEBマーケティングとは？  
 
