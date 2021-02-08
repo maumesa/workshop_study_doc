@@ -84,7 +84,8 @@ result_type で設定できる値は、三種類
 
  - Twtter API使用
    - Pythonのインストール
-   - Tweepyを使用して投稿内容を取得
+   - Tweepyを使用して投稿内容を取得  
+     [Tweepy sample Program](twitterSearch_commitEdit.py)
    - VSCodeに「Pylance」という拡張機能を追加、VSCode上でPythonの実行を可能に
 
  - Amazon Comprehend
