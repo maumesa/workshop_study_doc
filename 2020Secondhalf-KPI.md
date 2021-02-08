@@ -74,24 +74,24 @@ result_type で設定できる値は、三種類
 
 ### ざっくり手順　後のメモ
  - Twtter API申請
-  - 当初アドレスのサイト参考に実施  
-    アドレス：https://tech-lab.sios.jp/archives/21238  
-  - 理由の英訳などはGoogle翻訳を使用  
-  - 申請3日後、日本語のメールで再度申請理由を求められる。   
-  - 英語で返そうと考えたが、下記サイトで当初申請時から日本語でも行けると嘘か誠か記載あり  
-    アドレス：https://qiita.com/newt0/items/66cb76b1c8016e9d0339
-  - 試しに日本語で返信、数時間後には申請が通る  
+   - 当初アドレスのサイト参考に実施  
+     アドレス：https://tech-lab.sios.jp/archives/21238  
+   - 理由の英訳などはGoogle翻訳を使用  
+   - 申請3日後、日本語のメールで再度申請理由を求められる。   
+   - 英語で返そうと考えたが、下記サイトで当初申請時から日本語でも行けると嘘か誠か記載あり  
+     アドレス：https://qiita.com/newt0/items/66cb76b1c8016e9d0339
+   - 試しに日本語で返信、数時間後には申請が通る  
 
  - Twtter API使用
-  - Pythonのインストール
-  - Tweepyを使用して投稿内容を取得
-  - VSCodeに「Pylance」という拡張機能を追加、VSCode上でPythonの実行を可能に
+   - Pythonのインストール
+   - Tweepyを使用して投稿内容を取得
+   - VSCodeに「Pylance」という拡張機能を追加、VSCode上でPythonの実行を可能に
 
  - Amazon Comprehend
-  - S3に分析用のバケットを作成
-  - Amazon Comprehendに分析用のjobを作成
-  - Jsonがかえって来る
+   - S3に分析用のバケットを作成
+   - Amazon Comprehendに分析用のjobを作成
+   - Jsonがかえって来る
 
-　- 参考サイト；
+　 - 参考サイト；
 　　https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F655635%2F57dc1c33-cab6-913c-27db-3950b4ec7fec.png?ixlib=rb-1.2.2&auto=format&gif-q=60&q=75&s=d71cb04f456d1dc752208c82b75ade00
 
