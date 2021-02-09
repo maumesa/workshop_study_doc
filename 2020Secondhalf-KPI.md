@@ -74,27 +74,27 @@ result_type で設定できる値は、三種類
 
 ### ざっくり手順　後のメモ
  - Twtter API申請
-  - 当初アドレスのサイト参考に実施  
-    アドレス：https://tech-lab.sios.jp/archives/21238  
-  - 理由の英訳などはGoogle翻訳を使用  
-  - 申請3日後、日本語のメールで再度申請理由を求められる。   
-  - 英語で返そうと考えたが、下記サイトで当初申請時から日本語でも行けると嘘か誠か記載あり  
-    アドレス：https://qiita.com/newt0/items/66cb76b1c8016e9d0339
-  - 試しに日本語で返信、数時間後には申請が通る  
+   - 当初アドレスのサイト参考に実施  
+     アドレス：https://tech-lab.sios.jp/archives/21238  
+   - 理由の英訳などはGoogle翻訳を使用  
+   - 申請3日後、日本語のメールで再度申請理由を求められる。   
+   - 英語で返そうと考えたが、下記サイトで当初申請時から日本語でも行けると嘘か誠か記載あり  
+     アドレス：https://qiita.com/newt0/items/66cb76b1c8016e9d0339
+   - 試しに日本語で返信、数時間後には申請が通る  
 
  - Twtter API使用  
-  - Pythonのインストール  
-  - Tweepyを使用して投稿内容を取得  
-  - VSCodeに「Pylance」という拡張機能を追加、VSCode上でPythonの実行を可能に  
+   - Pythonのインストール  
+   - Tweepyを使用して投稿内容を取得  
+     [Tweepy sample Program](twitterSearch_commitEdit.py)
+   - VSCodeに「Pylance」という拡張機能を追加、VSCode上でPythonの実行を可能に  
 
  - Amazon Comprehend  
-  - S3に分析用のバケットを作成  
-  - Twetterから取得したcsvファイルを配置(724行 約65000ワード)   
-  - Amazon Comprehendに分析用のjobを作成・実行　約6分  
-  - S3にGZ形式で出力される、解凍するとJson形式のOutPut  
+   - S3に分析用のバケットを作成  
+   - Twetterから取得したcsvファイルを配置(724行 約65000ワード)   
+   - Amazon Comprehendに分析用のjobを作成・実行　約6分  
+   - S3にGZ形式で出力される、解凍するとJson形式のOutPut  
     出力結果下記のようななのが行数分ある  
     {"File": "0208-0209searchWord_python_tweet_idLess.csv", "Line": 447, "Sentiment": "POSITIVE", "SentimentScore": {"Mixed": 1.8738746803137474e-05, "Negative": 8.521594281774014e-05, "Neutral": 0.003721268381923437, "Positive": 0.996174693107605}}
 
-　- 参考サイト；
-　　https://qiita.com/omiyu/items/f67df5a088e35569d1c3
+   - 参考サイト：https://qiita.com/omiyu/items/f67df5a088e35569d1c3
 
