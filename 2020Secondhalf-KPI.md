@@ -33,7 +33,7 @@ SNS上でそのワードに対してどのような感情を抱いているの�
   - [x] PythonのTweepyを使用して情報取得  
 
 - 取得情報に対して「自然言語解析・感情分析」を実施  
-  - [ ] STEP1 【対応中】S3にデータをおいて手動で分析（Comprehed)  
+  - [x] STEP1 S3にデータをおいて手動で分析（Comprehed)  
   - [ ] STEP2 Lambda関数からComprehend実行  
   - [ ] STEP3 （仮）Twitter検索用のWEBサイト作成  
   - [ ] STEP4 （仮）Amazon Quicksightを用いて解析結果をグラフ化  
@@ -82,16 +82,19 @@ result_type で設定できる値は、三種類
     アドレス：https://qiita.com/newt0/items/66cb76b1c8016e9d0339
   - 試しに日本語で返信、数時間後には申請が通る  
 
- - Twtter API使用
-  - Pythonのインストール
-  - Tweepyを使用して投稿内容を取得
-  - VSCodeに「Pylance」という拡張機能を追加、VSCode上でPythonの実行を可能に
+ - Twtter API使用  
+  - Pythonのインストール  
+  - Tweepyを使用して投稿内容を取得  
+  - VSCodeに「Pylance」という拡張機能を追加、VSCode上でPythonの実行を可能に  
 
- - Amazon Comprehend
-  - S3に分析用のバケットを作成
-  - Amazon Comprehendに分析用のjobを作成
-  - Jsonがかえって来る
+ - Amazon Comprehend  
+  - S3に分析用のバケットを作成  
+  - Twetterから取得したcsvファイルを配置(724行 約65000ワード)   
+  - Amazon Comprehendに分析用のjobを作成・実行　約6分  
+  - S3にGZ形式で出力される、解凍するとJson形式のOutPut  
+    出力結果下記のようななのが行数分ある  
+    {"File": "0208-0209searchWord_python_tweet_idLess.csv", "Line": 447, "Sentiment": "POSITIVE", "SentimentScore": {"Mixed": 1.8738746803137474e-05, "Negative": 8.521594281774014e-05, "Neutral": 0.003721268381923437, "Positive": 0.996174693107605}}
 
 　- 参考サイト；
-　　https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F655635%2F57dc1c33-cab6-913c-27db-3950b4ec7fec.png?ixlib=rb-1.2.2&auto=format&gif-q=60&q=75&s=d71cb04f456d1dc752208c82b75ade00
+　　https://qiita.com/omiyu/items/f67df5a088e35569d1c3
 
