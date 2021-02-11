@@ -33,10 +33,12 @@ SNS上でそのワードに対してどのような感情を抱いているの�
   - [x] PythonのTweepyを使用して情報取得  
 
 - 取得情報に対して「自然言語解析・感情分析」を実施  
-  - [x] STEP1 S3にデータをおいて手動で分析（Comprehed)  
-  - [ ] STEP2 Lambda関数からComprehend実行  
-  - [ ] STEP3 （仮）Twitter検索用のWEBサイト作成  
-  - [ ] STEP4 （仮）Amazon Quicksightを用いて解析結果をグラフ化  
+  - [x] STEP1 S3にデータをおいて手動で感情分析（Comprehed)  
+  - [x] STEP2 S3にデータをおいて手動でキーフレーズ抽出（Comprehed)  
+  - [ ] STEP3 Lambda関数からComprehend実行  
+  - [ ] STEP4 （仮）Twitter検索用のWEBサイト作成  
+  - [ ] STEP5 （仮）Amazon Quicksightを用いて解析結果をグラフ化  
+               テキストマイニング、頻出ワードの可視化
 
  - その他上記に画像解析や音声認識での検索も詰め込めるか？  
   - [ ] （仮）音声分析  
@@ -45,10 +47,10 @@ SNS上でそのワードに対してどのような感情を抱いているの�
 
 ### アウトプットイメージ及びサービス構成などの設計(随時更新)  
 
-- 1STEP目の構成、まずは、シンプルに手動で  
+- 1、2STEP目の構成、まずは、シンプルに手動で  
 ![alt](assets/image/1STEP_FLOW.png)
 
-- 2STEP目の構成、Lambda関数からComprehend実行    
+- 3STEP目の構成、Lambda関数からComprehend実行    
 ![alt](assets/image/2STEP_FLOW.png)
 　
 ---
@@ -99,3 +101,6 @@ result_type で設定できる値は、三種類
 
    - 参考サイト：https://qiita.com/omiyu/items/f67df5a088e35569d1c3
 
+   - 次はキーワードの抽出を実施
+   　取得結果例
+   　{"File": "0208-0209searchWord_python_tweet_idLess.csv", "KeyPhrases": [{"BeginOffset": 0, "EndOffset": 7, "Score": 0.9999777083605178, "Text": "スクレイピング"}, {"BeginOffset": 8, "EndOffset": 10, "Score": 0.9999493386194785, "Text": "画像"}, {"BeginOffset": 11, "EndOffset": 13, "Score": 0.8776754662348185, "Text": "自動"}, {"BeginOffset": 20, "EndOffset": 37, "Score": 0.999979115197396, "Text": "Webスクレイピングによる画像保存"}, {"BeginOffset": 78, "EndOffset": 116, "Score": 0.9977772331624434, "Text": "#Python #プログラミング #プログラミング講座 #プログラミング解説"}], "Line": 42}
