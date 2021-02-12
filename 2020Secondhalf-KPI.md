@@ -56,21 +56,20 @@ SNS上でそのワードに対してどのような感情を抱いているの�
 ---
 
 ### その他
+  
+ - ツイート取得時のTweepyのオプション
+   - result_type で設定できる値は、三種類
+      - "recent"： 時系列で最新のツイートを検索(デフォルト)
+      - "popular"： 人気のあるツイートを検索（何を基準に人気か判断しているかは不明）
+      - "mixed"： 上記を混ぜたもの。
 
-　Amazon Comprehend  
+　- Amazon Comprehend  
   　無料利用枠は、AWS の新規および既存両方を対象としており、初回の Amazon Comprehend リクエストを行った日から 12 か月間利用可能  
     50,000 単位のテキスト (500 万文字)  
    
     無料では無い場合：キーフレーズ抽出	0.0001USDくらい  
     詳しくはAWSのサイトを参照  
     　https://aws.amazon.com/jp/comprehend/pricing/  
-
-result_type で設定できる値は、三種類
-"recent"： 時系列で最新のツイートを検索
-"popular"： 人気のあるツイートを検索（何を基準に人気か判断しているかは不明）
-"mixed"： 上記を混ぜたもの。
-
-デフォルトだと "recent"
 
 ---
 
@@ -94,6 +93,8 @@ result_type で設定できる値は、三種類
  - Amazon Comprehend  
    - S3に分析用のバケットを作成  
    - Twetterから取得したcsvファイルを配置(724行 約65000ワード)   
+     [インプットデータ](0208-0209searchWord_python_tweet_idLess.csv)
+
    - Amazon Comprehendに分析用のjobを作成・実行　約6分  
    - S3にGZ形式で出力される、解凍するとJson形式のOutPut  
     出力結果下記のようなのが行数分ある  
