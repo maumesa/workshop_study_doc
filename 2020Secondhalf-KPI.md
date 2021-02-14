@@ -35,7 +35,7 @@ SNS上でそのワードに対してどのような感情を抱いているの�
 - 取得情報に対して「自然言語解析・感情分析」を実施  
   - [x] STEP1 S3にデータをおいて手動で感情分析（Comprehed)  
   - [x] STEP2 S3にデータをおいて手動でキーフレーズ抽出（Comprehed)  
-  - [ ] STEP3 Lambda関数からComprehend実行  
+  - [x] STEP3 Lambda関数からComprehend実行  
   - [ ] STEP4 （仮）Twitter検索用のWEBサイト作成  
   - [ ] STEP5 （仮）Amazon Quicksightを用いて解析結果をグラフ化  
                テキストマイニング、頻出ワードの可視化
@@ -105,3 +105,19 @@ SNS上でそのワードに対してどのような感情を抱いているの�
    - 次はキーワードの抽出を実施
    　取得結果例
    　{"File": "0208-0209searchWord_python_tweet_idLess.csv", "KeyPhrases": [{"BeginOffset": 0, "EndOffset": 7, "Score": 0.9999777083605178, "Text": "スクレイピング"}, {"BeginOffset": 8, "EndOffset": 10, "Score": 0.9999493386194785, "Text": "画像"}, {"BeginOffset": 11, "EndOffset": 13, "Score": 0.8776754662348185, "Text": "自動"}, {"BeginOffset": 20, "EndOffset": 37, "Score": 0.999979115197396, "Text": "Webスクレイピングによる画像保存"}, {"BeginOffset": 78, "EndOffset": 116, "Score": 0.9977772331624434, "Text": "#Python #プログラミング #プログラミング講座 #プログラミング解説"}], "Line": 42}
+
+ - API Gateway → Lambda → Comprehend
+   - Lambda作成
+     1. Python3.8で関数の作成
+     1. ロールにComprehendのアクセス権限を付与
+     1. boto3.client('comprehend')を使用して、comprehendを扱うLamabda Functionを作成する
+        参考サイト:https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/comprehend.html#Comprehend.Client.detect_sentiment
+
+   - API Gateway作成
+     1. HTTP APIを作成
+     1. 作成したLambdaを呼ぶように設定
+
+   - ブラウザから実行
+     1. 作成した「APIGateway」のURLにLambdaFunction名をつけ、クエリストリングで感情分析を実施したいワードを指定
+     1. APIの返却値として、分析結果がJson形式で返却される
+
