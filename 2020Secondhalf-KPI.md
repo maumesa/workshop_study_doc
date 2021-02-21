@@ -36,8 +36,8 @@ SNS上でそのワードに対してどのような感情を抱いているの�
   - [x] STEP1 S3にデータをおいて手動で感情分析（Comprehed)  
   - [x] STEP2 S3にデータをおいて手動でキーフレーズ抽出（Comprehed)  
   - [x] STEP3 Lambda関数からComprehend実行  
-  - [ ] STEP4 （仮）Twitter検索用のWEBサイト作成  
-  - [ ] STEP5 （仮）Amazon Quicksightを用いて解析結果をグラフ化  
+  - [ ] STEP4 Twitter検索用のWEBアプリ作成  
+  - [ ] STEP5 python Stremlitを用いた可視化サイトの作成
                テキストマイニング、頻出ワードの可視化
 
  - その他上記に画像解析や音声認識での検索も詰め込めるか？  
@@ -53,6 +53,9 @@ SNS上でそのワードに対してどのような感情を抱いているの�
 - 3STEP目の構成、Lambda関数からComprehend実行    
 ![alt](assets/image/2STEP_FLOW.png)
 　
+- 4,5STEP目の構成、PythonからSTEP3のAPI起動
+
+
 ---
 
 ### その他
@@ -117,7 +120,18 @@ SNS上でそのワードに対してどのような感情を抱いているの�
      1. HTTP APIを作成
      1. 作成したLambdaを呼ぶように設定
 
-   - ブラウザから実行
-     1. 作成した「APIGateway」のURLにLambdaFunction名をつけ、クエリストリングで感情分析を実施したいワードを指定
-     1. APIの返却値として、分析結果がJson形式で返却される
+   - ブラウザから実行  
+     1. 作成した「APIGateway」のURLにLambdaFunction名をつけ、クエリストリングで感情分析を実施したいワードを指定  
+     1. APIの返却値として、分析結果がJson形式で返却される  
 
+ - 【STEP4,5】WEBアプリ  
+   - 言語：python FW：Flask 公開用サービス：HEROKU  
+     1. サンプルWEBアプリの作成及び公開 → TODOアプリの作成公開完了  
+
+   - 言語：python FW：Streamlit 公開用サービス：Streamlit Sharing  
+     1. Twitterの投稿内容をAWSComprehendを使用して感情分析行った結果をINPUTとした円グラフページ完成  
+     1. Twitterの投稿内容をAWSComprehendを使用して頻出ワード抽出した結果をINPUTとしたデータ表及びwordcloudの表示成功  
+     1. python Mecabを使用して自然言語解析を行った結果をINPUTとしたデータ表及びwordcloudの未着手  
+     1. 公開　Streamlit Sharingの申請通過待ち火曜日になっても通過しない場合はHEROKUでの公開に切り替え予定  
+
+  
