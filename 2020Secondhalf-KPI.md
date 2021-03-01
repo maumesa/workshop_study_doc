@@ -36,9 +36,15 @@ SNS上でそのワードに対してどのような感情を抱いているの�
   - [x] STEP1 S3にデータをおいて手動で感情分析（Comprehed)  
   - [x] STEP2 S3にデータをおいて手動でキーフレーズ抽出（Comprehed)  
   - [x] STEP3 Lambda関数からComprehend実行  
-  - [ ] STEP4 Twitter検索用のWEBアプリ作成  
-  - [ ] STEP5 python Stremlitを用いた可視化サイトの作成
-               テキストマイニング、頻出ワードの可視化
+  - [x] STEP4 python Stremlitを用いた可視化サイトの作成  
+               テキストマイニング、頻出ワードの可視化  
+  - [x] STEP5 STEP4のアプリからSTEP3のAPIを呼べるように変更  
+  - [x] STEP6 STEP4のアプリを公開(私が使わないときは止めているので見たい場合は連絡下さい)  
+        URL:[https://nlp-sentiment-streamlitapp.herokuapp.com/](https://nlp-sentiment-streamlitapp.herokuapp.com/)
+  - [x] STEP7 Comprehed以外の自然言語解析Mecabを使用したWebアプリ作成  
+                Local環境でアプリ作成完了  
+  - [ ] STEP8 STEP7のアプリを公開（難航中）  
+  - [ ] STEP9 Twitter検索用のWEBアプリ作成（もう少し）  
 
  - その他上記に画像解析や音声認識での検索も詰め込めるか？  
   - [ ] （仮）音声分析  
