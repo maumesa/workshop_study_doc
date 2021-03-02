@@ -43,6 +43,7 @@ SNS上でそのワードに対してどのような感情を抱いているの�
         URL:[https://nlp-sentiment-streamlitapp.herokuapp.com/](https://nlp-sentiment-streamlitapp.herokuapp.com/)
   - [x] STEP7 Comprehed以外の自然言語解析Mecabを使用したWebアプリ作成  
                 Local環境でアプリ作成完了  
+                操作動画アップしたが形式が合わずGITで見れなかった。。。  
   - [ ] STEP8 STEP7のアプリを公開（難航中）  
                 現状Herokuでの公開予定だが、難しいのであればAWSでの公開に変更
   - [ ] STEP9 Twitter検索用のWEBアプリ作成（もう少し）  
